@@ -24,8 +24,8 @@ contract StorageFactory is SimpleStorage{
     
     /**
      * @dev sfStore value in store() of SimpleStorage.
-     * @param _simpleStorageIndex value to tell with which contract user wants to interact
-     * @param _simpleStorageNumber value to call on the Store() of simpleStorage contract
+     * @param _simpleStorageIndex index value of simpleStorageArray which has to be called.
+     * @param _simpleStorageNumber value to call on the Store() of simpleStorage contract.
      */
     function sfStore(uint256 _simpleStorageIndex, uint256 _simpleStorageNumber) public {
         
