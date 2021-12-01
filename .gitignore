@@ -2,4 +2,10 @@ Pipfile.lock
 Pipfile
 __pycache__
 .env
+.history
+.hypothesis/
+build/
+reports/
+
+.env
 yarn.lock
