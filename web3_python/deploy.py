@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ganache_url = "HTTP://127.0.0.1:7545"
-web3_ = Web3(Web3.HTTPProvider(ganache_url))
+provider_url = os.getenv("PROVIDER")
+web3_ = Web3(Web3.HTTPProvider(provider_url))
 
 chain_id = 1337
 address = os.getenv("ADDRESS")

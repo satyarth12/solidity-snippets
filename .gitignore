@@ -2,3 +2,4 @@ Pipfile.lock
 Pipfile
 __pycache__
 .env
+yarn.lock
