@@ -2,21 +2,19 @@
 BROWNIE will automatically load, compile and deploy the smart contracts
 """
 
-"""
-BROWNIE CMD COMMANDS:
-brownie accounts new "account-name"
-brownie accounts list
-brownie accounts delete "accounts-name"
-brownie run scripts/deploy.py
-"""
 
-
-
-
-from brownie import accounts, config, SimpleStorage
+from brownie import accounts, config, SimpleStorage, network
 import os
+
+
+def get_account():
+    if network.show_active() == "development":
+        return accounts[0]
+    return accounts.add(config["wallets"]["from_key"])
+
+
 def deploy_contract():
-    account = accounts[0]
+    account = get_account()
     # account = accounts.load("satyarth-account")
     # account = accounts.add(config["wallets"]["from_key"])
 

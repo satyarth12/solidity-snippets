@@ -6,6 +6,5 @@ __pycache__
 .hypothesis/
 build/
 reports/
-
-.env
+.pytest_*
 yarn.lock
