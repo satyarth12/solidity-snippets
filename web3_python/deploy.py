@@ -58,6 +58,10 @@ def compile(contract):
 
 def deploy_contract(abi_, bytecode_):
     """Connection with ganache and deploying on it
+
+    PARAMS: 
+        ABIS of the compiled contract
+        BYTECODE of the compiled contract
     """
     print("DEPLYOING CONTRACT")
     contract_object = web3_.eth.contract(abi=abi_, bytecode=bytecode_)
@@ -89,6 +93,11 @@ def deploy_contract(abi_, bytecode_):
 
 def contract_interact(cont_add, abi, nonce):
     """Wroking with contracts
+
+    PARAMS: 
+        ABIS of the deployed contract
+        CONTRACT ADDRESS of the deployed contract
+
     Call -> Simulate making the call and getting a return value. Doesn't make state change
     Transact -> Make the state change
     """
